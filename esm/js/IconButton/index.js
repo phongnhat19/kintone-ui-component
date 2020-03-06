@@ -41,7 +41,7 @@ var IconButton = /** @class */ (function (_super) {
         if (this._props.color && colors.indexOf(this._props.color) !== -1) {
             color = this._props.color;
         }
-        var shape = this._props.shape === 'normal' ? 'normal' : 'circle';
+        var shape = this._props.shape === 'square' ? 'square' : 'circle';
         var className = [
             'kuc-icon-btn',
             this._getClassSize(),
@@ -52,7 +52,7 @@ var IconButton = /** @class */ (function (_super) {
         return className.join(' ').trim();
     };
     IconButton.prototype._getClassSize = function () {
-        var className = this._props.size === 'small' ? 'small' : 'large';
+        var className = this._props.size === 'small' ? 'small' : 'normal';
         return className;
     };
     IconButton.prototype._getIconData = function () {
@@ -88,7 +88,7 @@ var IconButton = /** @class */ (function (_super) {
             this.pathEl.setAttribute('d', this._getIconData());
         }
         if (changedAttr.indexOf('isDisabled') !== -1) {
-            if (this._props.isDisabled) {
+            if (this._props.isDisabled === true) {
                 this.element.setAttribute('disabled', "" + this._props.isDisabled);
             }
             else {

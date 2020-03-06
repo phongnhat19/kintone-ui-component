@@ -196,14 +196,14 @@ var Table = /** @class */ (function (_super) {
     };
     Table.prototype._dispatch = function (eventOption) {
         if (eventOption.type === 'ADD_ROW') {
+            this._renderTableRows();
+            this._renderCells();
             if (this._props.onRowAdd) {
                 var newRowData = this._props.onRowAdd(eventOption);
                 if (newRowData && this._props.data) {
                     this._props.data[eventOption.rowIndex] = newRowData;
                 }
             }
-            this._renderTableRows();
-            this._renderCells();
         }
         if (eventOption.type === 'REMOVE_ROW') {
             if (this._props.onRowRemove) {
