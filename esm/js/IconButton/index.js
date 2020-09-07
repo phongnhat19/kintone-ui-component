@@ -7,7 +7,6 @@ var IconButton = /** @class */ (function (_super) {
     tslib_1.__extends(IconButton, _super);
     function IconButton(params) {
         var _this = _super.call(this) || this;
-        _this._onClick = function (e) { };
         _this._props = tslib_1.__assign({}, _this._props, {
             type: 'insert',
             size: 'normal',
@@ -27,7 +26,7 @@ var IconButton = /** @class */ (function (_super) {
         btnEl.addEventListener('click', function (e) {
             if (_this._props.isDisabled)
                 return;
-            _this._onClick(e);
+            _this._onClick && _this._onClick(e);
         });
         this.pathEl = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         this.iconEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

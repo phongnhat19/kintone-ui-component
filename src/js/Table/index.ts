@@ -14,18 +14,18 @@ type TableColumnJS = {
 
 type DispatchParams = {
   type: string;
-  data?: object[];
+  data?: Array<Record<string, any>>;
   rowIndex: number;
   fieldName?: string;
 }
 
 type HandlerFunction = (
   eventOptions: DispatchParams
-) => void | object
+) => void | Record<string, any>
 
 type TableProps = ControlProps & {
-  data?: object[];
-  defaultRowData?: object;
+  data?: Array<Record<string, any>>;
+  defaultRowData?: Record<string, any>;
   columns?: Array<TableColumnJS | ActionFlag>;
   actionButtonsShown?: boolean;
   onRowAdd?: HandlerFunction;
@@ -127,11 +127,11 @@ export default class Table extends Control<TableProps> {
       });
     });
   }
-  private _isObject(item: object) {
+  private _isObject(item: Record<string, any>) {
     return (item && typeof item === 'object' && !Array.isArray(item));
   }
 
-  private _mergeDeep(target: object, source: object) {
+  private _mergeDeep(target: Record<string, any>, source: Record<string, any>) {
     const output = Object.assign({}, target);
     if (this._isObject(target) && this._isObject(source)) {
       Object.keys(source).forEach(key => {
@@ -199,7 +199,6 @@ export default class Table extends Control<TableProps> {
     const tableCellDiv = document.createElement('div');
     tableCellDiv.className = 'kuc-table-td action-group';
     const span1 = document.createElement('span');
-    span1.style.marginRight = '5px';
     tableCellDiv.appendChild(span1);
     const iconButton = new IconButton({type: 'insert', color: 'blue', size: 'small'});
     const iconButtonDom = iconButton.render();
@@ -210,10 +209,10 @@ export default class Table extends Control<TableProps> {
         rowIndex: rowIndex + 1
       });
     });
-    iconButtonDom.style.display = 'inline-block';
     span1.appendChild(iconButtonDom);
     if (this._props.data && this._props.data.length > 1) {
       const span2 = document.createElement('span');
+      span2.style.marginLeft = '5px';
       const iconButton2 = new IconButton({type: 'remove', color: 'gray', size: 'small'});
       const iconButtonDom2 = iconButton2.render();
       iconButton2.on('click', () => {
@@ -223,7 +222,6 @@ export default class Table extends Control<TableProps> {
           rowIndex: rowIndex
         });
       });
-      iconButtonDom2.style.display = 'inline-block';
       span2.appendChild(iconButtonDom2);
       tableCellDiv.appendChild(span2);
     }
@@ -288,7 +286,7 @@ export default class Table extends Control<TableProps> {
     });
   }
 
-  updateRowData(rowIndex: number, data: object[], rerender = true, trigger = true, fieldName: string = '') {
+  updateRowData(rowIndex: number, data: Record<string, any>, rerender = true, trigger = true, fieldName: string = '') {
     if (rowIndex === undefined || data === undefined) {
       throw new Error(Message.common.INVALID_ARGUMENT);
     }
@@ -343,7 +341,7 @@ export default class Table extends Control<TableProps> {
     return this._props.data;
   }
 
-  setValue(data: object[]) {
+  setValue(data: Array<Record<string, any>>) {
     if (!Array.isArray(data)) {
       throw new Error(Message.common.INVALID_ARGUMENT);
     }
@@ -359,3 +357,5 @@ export default class Table extends Control<TableProps> {
     this._props['on' + eventName.charAt(0).toUpperCase() + eventName.slice(1)] = callback;
   }
 }
+
+export {TableProps};
