@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
     
     
       
@@ -63,6 +63,7 @@
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
     
       <link rel="stylesheet" href="../../style/extra.css">
     
@@ -102,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#checkbox" tabindex="1" class="md-skip">
+      <a href="#checkbox" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -115,7 +116,7 @@
  
       <!-- Link to home -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://kintone.github.io/kintone-ui-component/"
+        <a href="../.."
             title="kintone UI Component"
             class="md-header-nav__button md-logo">
           
@@ -134,7 +135,7 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title"
             data-md-component="title">
-            <a href="https://kintone.github.io/kintone-ui-component/">kintone UI Component</a> <a style="text-decoration: underline;" href="https://kintone.github.io/kintone-ui-component//latest/versions">v0.2.0</a>
+            <a href="../..">kintone UI Component</a> <a style="text-decoration: underline;" href="../../versions">v0.7.4</a>
         </div>
       </div>
  
@@ -454,6 +455,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#setitemsitems" title="setItems(items)" class="md-nav__link">
+    setItems(items)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#getvalue" title="getValue()" class="md-nav__link">
     getValue()
   </a>
@@ -529,6 +537,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ColorPicker/" title="ColorPicker" class="md-nav__link">
+      ColorPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DateTime/" title="DateTime" class="md-nav__link">
+      DateTime
+    </a>
   </li>
 
         
@@ -658,6 +690,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Tabs/" title="Tabs" class="md-nav__link">
+      Tabs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Text/" title="Text" class="md-nav__link">
       Text
     </a>
@@ -754,6 +798,13 @@
           <li class="md-nav__item">
   <a href="#getitems" title="getItems()" class="md-nav__link">
     getItems()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setitemsitems" title="setItems(items)" class="md-nav__link">
+    setItems(items)
   </a>
   
 </li>
@@ -897,22 +948,22 @@
 <td>List of items which will be displayed on checkbox.</td>
 </tr>
 <tr>
-<td>options.items[].value</td>
+<td>options.items[x].value</td>
 <td>String</td>
-<td>Yes</td>
-<td>String value of item <br> If the value is duplicate, the error message will be displayed</td>
+<td>Conditional</td>
+<td>String value of item. This is required if <b>options.items[x]</b> is specified.<br>If the value is duplicate, the error message will be displayed</td>
 </tr>
 <tr>
-<td>options.items[].label</td>
+<td>options.items[x].label</td>
 <td>String</td>
 <td>No</td>
 <td>String label of item</td>
 </tr>
 <tr>
-<td>options.items[].isDisabled</td>
+<td>options.items[x].isDisabled</td>
 <td>Boolean</td>
 <td>No</td>
-<td>Indicate item will be disabled when display. Default value is false.</td>
+<td>Indicate item will be disabled when display. Default value: 'false'</td>
 </tr>
 <tr>
 <td>options.value</td>
@@ -934,8 +985,8 @@
 </tr>
 </tbody>
 </table>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -962,11 +1013,10 @@
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
-
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -994,7 +1044,7 @@ export default class Plugin extends React.Component {
 }
 </code></pre>
 
-<p></details></p>
+</details>
 <h2 id="methods">Methods</h2>
 <h3 id="render">render()</h3>
 <p>Get dom element of component.</p>
@@ -1002,8 +1052,8 @@ export default class Plugin extends React.Component {
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>Dom element</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1033,11 +1083,12 @@ body.appendChild(checkbox.render());
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -1063,9 +1114,10 @@ export default class Plugin extends React.Component {
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="additemitem">addItem(item)</h3>
 <p>Add an item to the end of checkbox list.</p>
 <p><strong>Parameter</strong></p>
@@ -1081,9 +1133,9 @@ export default class Plugin extends React.Component {
 <tbody>
 <tr>
 <td>item</td>
-<td>String</td>
+<td>Object</td>
 <td>Yes</td>
-<td>The item will be added to multile choices list.</td>
+<td>The item will be added to checkbox list.</td>
 </tr>
 <tr>
 <td>item.value</td>
@@ -1107,8 +1159,8 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1144,10 +1196,11 @@ checkbox.addItem({
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
+    constructor(props) {
+        super(props);
         this.state = {
             items: []
         }
@@ -1173,9 +1226,10 @@ export default class Plugin extends React.Component {
       }))
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="getitemindex">getItem(index)</h3>
 <p>Get the value of specific position in checkbox list.</p>
 <p><strong>Parameter</strong></p>
@@ -1210,7 +1264,7 @@ export default class Plugin extends React.Component {
 <tbody>
 <tr>
 <td>item</td>
-<td>String</td>
+<td>Object</td>
 <td>the item of the checkbox</td>
 </tr>
 <tr>
@@ -1230,8 +1284,8 @@ export default class Plugin extends React.Component {
 </tr>
 </tbody>
 </table>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1264,10 +1318,11 @@ console.log(firstItem);
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
+    constructor(props) {
+        super(props);
         this.state = {
             items: [
                 {
@@ -1286,7 +1341,7 @@ export default class Plugin extends React.Component {
                     isDisabled: true
                 }
             ]
-        }
+        };
     }
 
     render() {
@@ -1302,9 +1357,10 @@ export default class Plugin extends React.Component {
         console.log(this.state.items[0])
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="removeitemindex">removeItem(index)</h3>
 <p>Remove the specific item from checkbox list.</p>
 <p><strong>Parameter</strong></p>
@@ -1328,8 +1384,8 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1361,10 +1417,11 @@ checkbox.removeItem(0);
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
+    constructor(props) {
+        super(props);
         this.state = {
             items: [
                 {
@@ -1383,7 +1440,7 @@ export default class Plugin extends React.Component {
                     isDisabled: true
                 }
             ]
-        }
+        };
     }
 
     render() {
@@ -1408,9 +1465,10 @@ export default class Plugin extends React.Component {
       });
     };
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="getitems">getItems()</h3>
 <p>Get all items from the checkbox.</p>
 <p><strong>Parameter</strong></p>
@@ -1448,8 +1506,8 @@ export default class Plugin extends React.Component {
 </tr>
 </tbody>
 </table>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1484,11 +1542,12 @@ items.forEach(function(item) {
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -1523,9 +1582,163 @@ export default class Plugin extends React.Component {
         });
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
+<h3 id="setitemsitems">setItems(items)</h3>
+<p>Set all items of the checkbox.
+When using this function in pure js, selected value is released.</p>
+<p><strong>Parameter</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>Object</td>
+<td>No</td>
+<td>A object contains params of constructor.</td>
+</tr>
+<tr>
+<td>options.items</td>
+<td>Array&lt;Object&gt;</td>
+<td>Yes</td>
+<td>List of items which will be displayed on checkbox.</td>
+</tr>
+<tr>
+<td>options.items[x].value</td>
+<td>String</td>
+<td>Yes</td>
+<td>If the value is duplicate, the error message will be displayed.</td>
+</tr>
+<tr>
+<td>options.items[x].label</td>
+<td>String</td>
+<td>No</td>
+<td>Display string.</td>
+</tr>
+<tr>
+<td>options.items[x].isDisabled</td>
+<td>Boolean</td>
+<td>No</td>
+<td>Indicate item will be disabled when display.<br>Default value: 'false'.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<p>None</p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
+<p><strong>Javascript</strong></p>
+<pre><code class="javascript">vvar checkbox = new kintoneUIComponent.CheckBox({
+  items: [
+    {
+      label: 'Orange',
+      value: 'Orange',
+      isDisabled: false
+    },
+    {
+      label: 'Banana',
+      value: 'Banana',
+      isDisabled: true
+    },
+    {
+      label: 'Lemon',
+      value: 'Lemon',
+      isDisabled: true
+    }
+  ],
+  value: ['Orange', 'Banana']
+});
+
+var body = document.getElementsByTagName('BODY')[0];
+body.appendChild(checkbox.render());
+
+var newItems = [
+  {
+    label: 'Apple',
+    value: 'Apple',
+    isDisabled: true
+  },
+  {
+    label: 'Grapes',
+    value: 'Grapes',
+    isDisabled: false
+  }
+];
+checkbox.setItems(newItems);
+</code></pre>
+
+<p><strong>React</strong></p>
+<pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
+import React from 'react';
+
+export default class Plugin extends React.Component {
+  constructor(opts) {
+    super(opts);
+    this.state = {
+      items: [
+        {
+          label: 'Orange',
+          value: 'Orange',
+          isDisabled: false
+        },
+        {
+          label: 'Banana',
+          value: 'Banana',
+          isDisabled: true
+        },
+        {
+          label: 'Lemon',
+          value: 'Lemon',
+          isDisabled: true
+        }
+      ],
+      value: ['Orange', 'Banana']
+    };
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;CheckBox
+          items={this.state.items}
+          value={this.state.value}
+          onChange={value =&gt; {
+            this.setState({ value });
+          }}
+        /&gt;
+        &lt;button onClick={this.handleClick}&gt;Set Items&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  handleClick = () =&gt; {
+    const newItems = [
+      {
+        label: 'Apple',
+        value: 'Apple',
+        isDisabled: true
+      },
+      {
+        label: 'Grapes',
+        value: 'Grapes',
+        isDisabled: false
+      }
+    ];
+    this.setState({ items: newItems, value: ['Apple'] });
+  };
+}
+</code></pre>
+
+</details>
 <h3 id="getvalue">getValue()</h3>
 <p>Get the checked values of the checkbox.</p>
 <p><strong>Parameter</strong></p>
@@ -1548,8 +1761,8 @@ export default class Plugin extends React.Component {
 </tr>
 </tbody>
 </table>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1584,11 +1797,12 @@ value.forEach(function(item) {
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -1621,9 +1835,10 @@ export default class Plugin extends React.Component {
        console.log(this.state.value);
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="setvaluevalue">setValue(value)</h3>
 <p>Set the checked value of checkbox.</p>
 <p><strong>Parameter</strong></p>
@@ -1647,8 +1862,8 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1680,11 +1895,12 @@ checkbox.setValue(['Lemon']);
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -1719,9 +1935,10 @@ export default class Plugin extends React.Component {
         });
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="disableitemvalue">disableItem(value)</h3>
 <p>Set the disabled item of checkbox.</p>
 <p><strong>Parameter</strong></p>
@@ -1737,16 +1954,16 @@ export default class Plugin extends React.Component {
 <tbody>
 <tr>
 <td>value</td>
-<td>Array<String></td>
+<td>String</td>
 <td>Yes</td>
-<td>The array contains checked value in list.</td>
+<td>The value of the checkbox item you want to disable.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1778,11 +1995,12 @@ checkbox.disableItem('Orange');
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -1818,9 +2036,10 @@ export default class Plugin extends React.Component {
         this.setState({ items: items });
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="enableitemvalue">enableItem(value)</h3>
 <p>Set the enable item of checkbox.</p>
 <p><strong>Parameter</strong></p>
@@ -1836,16 +2055,16 @@ export default class Plugin extends React.Component {
 <tbody>
 <tr>
 <td>value</td>
-<td>Array<String></td>
+<td>String</td>
 <td>Yes</td>
-<td>The array contains checked value in list.</td>
+<td>The value of the checkbox item you want to enable.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1877,11 +2096,12 @@ checkbox.enableItem('Banana');
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -1917,9 +2137,10 @@ export default class Plugin extends React.Component {
         this.setState({ items: items });
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="oneventname-callback">on(eventName, callBack)</h3>
 <p>Register callback for change event</p>
 <p><strong>Parameter</strong></p>
@@ -1949,8 +2170,8 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -1984,11 +2205,12 @@ checkbox.on('change', function(value) {
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
+    constructor(props) {
+        super(props);
+        const items = [
             {
                 label: 'Orange',
                 value: 'Orange',
@@ -2005,7 +2227,8 @@ export default class Plugin extends React.Component {
                 isDisabled: true
             },
         ];
-        this.state = {items: items};
+        const value= ['Orange', 'Banana']
+        this.state = {items: items,value};
     }
 
     render() {
@@ -2014,24 +2237,24 @@ export default class Plugin extends React.Component {
         );
     }
 
-    handleChange= () =&gt; {
-        const items = [...this.state.items];
+    handleChange= (value) =&gt; {
+        this.setState({value})
+        console.log(&quot;onChange&quot;,value);
 
-        items[1].isDisabled = false;
-        this.setState({ items: items });
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="show">show()</h3>
 <p>Display the checkbox.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -2063,47 +2286,59 @@ checkbox.show();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
-            {
-                label: 'Orange',
-                value: 'Orange',
-                isDisabled: false
-            },
-            {
-                label: 'Banana',
-                value: 'Banana',
-                isDisabled: true
-            },
-            {
-                label: 'Lemon',
-                value: 'Lemon',
-                isDisabled: true
-            },
-        ];
-        this.state = {items: items};
-    }
+   constructor(props) {
+    super(props);
+    const items = [
+      {
+        label: &quot;Orange&quot;,
+        value: &quot;Orange&quot;,
+        isDisabled: false
+      },
+      {
+        label: &quot;Banana&quot;,
+        value: &quot;Banana&quot;,
+        isDisabled: true
+      },
+      {
+        label: &quot;Lemon&quot;,
+        value: &quot;Lemon&quot;,
+        isDisabled: true
+      }
+    ];
+    this.state = { items: items, isVisible: false };
+  }
 
-    render() {
-        return (
-            &lt;CheckBox value={this.state.value} isVisible={true} items={this.state.items} onChange={(value) =&gt; {this.setState({value})}}/&gt;
-        );
-    }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;CheckBox
+          value={this.state.value}
+          isVisible={this.state.isVisible}
+          items={this.state.items}
+          onChange={value =&gt; {
+            this.setState({ value });
+          }}
+        /&gt;
+        &lt;button onClick={() =&gt; this.setState({ isVisible: true })}&gt;Show&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="hide">hide()</h3>
 <p>Hide the checkbox.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -2135,47 +2370,59 @@ checkbox.hide();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
-            {
-                label: 'Orange',
-                value: 'Orange',
-                isDisabled: false
-            },
-            {
-                label: 'Banana',
-                value: 'Banana',
-                isDisabled: true
-            },
-            {
-                label: 'Lemon',
-                value: 'Lemon',
-                isDisabled: true
-            },
-        ];
-        this.state = {items: items};
-    }
+    constructor(props) {
+    super(props);
+    const items = [
+      {
+        label: &quot;Orange&quot;,
+        value: &quot;Orange&quot;,
+        isDisabled: false
+      },
+      {
+        label: &quot;Banana&quot;,
+        value: &quot;Banana&quot;,
+        isDisabled: true
+      },
+      {
+        label: &quot;Lemon&quot;,
+        value: &quot;Lemon&quot;,
+        isDisabled: true
+      }
+    ];
+    this.state = { items: items, isVisible: true };
+  }
 
-    render() {
-        return (
-            &lt;CheckBox value={this.state.value} isVisible={false} items={this.state.items} onChange={(value) =&gt; {this.setState({value})}}/&gt;
-        );
-    }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;CheckBox
+          value={this.state.value}
+          isVisible={this.state.isVisible}
+          items={this.state.items}
+          onChange={value =&gt; {
+            this.setState({ value });
+          }}
+        /&gt;
+        &lt;button onClick={() =&gt; this.setState({ isVisible: false })}&gt;Hide&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="disable">disable()</h3>
 <p>Disabled the checkbox.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -2207,47 +2454,59 @@ checkbox.disable();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
-            {
-                label: 'Orange',
-                value: 'Orange',
-                isDisabled: false
-            },
-            {
-                label: 'Banana',
-                value: 'Banana',
-                isDisabled: true
-            },
-            {
-                label: 'Lemon',
-                value: 'Lemon',
-                isDisabled: true
-            },
-        ];
-        this.state = {items: items};
-    }
+    constructor(props) {
+    super(props);
+    const items = [
+      {
+        label: &quot;Orange&quot;,
+        value: &quot;Orange&quot;,
+        isDisabled: false
+      },
+      {
+        label: &quot;Banana&quot;,
+        value: &quot;Banana&quot;,
+        isDisabled: true
+      },
+      {
+        label: &quot;Lemon&quot;,
+        value: &quot;Lemon&quot;,
+        isDisabled: true
+      }
+    ];
+    this.state = { items: items, isDisabled: false };
+  }
 
-    render() {
-        return (
-            &lt;CheckBox isDisabled={true} items={this.state.items} value={this.state.value} onChange={(value) =&gt; {this.setState({value})}}/&gt;
-        );
-    }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;CheckBox
+          value={this.state.value}
+          isDisabled={this.state.isDisabled}
+          items={this.state.items}
+          onChange={value =&gt; {
+            this.setState({ value });
+          }}
+        /&gt;
+        &lt;button onClick={() =&gt; this.setState({ isDisabled: true })}&gt;Disable&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="enable">enable()</h3>
 <p>Enabled the checkbox.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var checkbox = new kintoneUIComponent.CheckBox ({
        items: [
@@ -2279,39 +2538,51 @@ checkbox.enable();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { CheckBox } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    constructor(opts) {
-        super(opts);
-        var items = [
-            {
-                label: 'Orange',
-                value: 'Orange',
-                isDisabled: false
-            },
-            {
-                label: 'Banana',
-                value: 'Banana',
-                isDisabled: true
-            },
-            {
-                label: 'Lemon',
-                value: 'Lemon',
-                isDisabled: true
-            },
-        ];
-        this.state = {items: items};
-    }
+     constructor(props) {
+    super(props);
+    const items = [
+      {
+        label: &quot;Orange&quot;,
+        value: &quot;Orange&quot;,
+        isDisabled: false
+      },
+      {
+        label: &quot;Banana&quot;,
+        value: &quot;Banana&quot;,
+        isDisabled: true
+      },
+      {
+        label: &quot;Lemon&quot;,
+        value: &quot;Lemon&quot;,
+        isDisabled: true
+      }
+    ];
+    this.state = { items: items, isDisabled: true };
+  }
 
-    render() {
-        return (
-            &lt;CheckBox isDisabled={false} items={this.state.items} value={this.state.value} onChange={(value) =&gt; {this.setState({value})}}/&gt;
-        );
-    }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;CheckBox
+          value={this.state.value}
+          isDisabled={this.state.isDisabled}
+          items={this.state.items}
+          onChange={value =&gt; {
+            this.setState({ value });
+          }}
+        /&gt;
+        &lt;button onClick={() =&gt; this.setState({ isDisabled: false })}&gt;Enable&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
                 
                   
                 
@@ -2347,13 +2618,13 @@ export default class Plugin extends React.Component {
           </a>
         
         
-          <a href="../Dialog/" title="Dialog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ColorPicker/" title="ColorPicker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Dialog
+                ColorPicker
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2383,7 +2654,7 @@ export default class Plugin extends React.Component {
       
     </div>
     
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

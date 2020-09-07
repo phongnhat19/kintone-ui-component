@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
     
     
       
@@ -63,6 +63,7 @@
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
     
       <link rel="stylesheet" href="../../style/extra.css">
     
@@ -102,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#button" tabindex="1" class="md-skip">
+      <a href="#button" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -115,7 +116,7 @@
  
       <!-- Link to home -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://kintone.github.io/kintone-ui-component/"
+        <a href="../.."
             title="kintone UI Component"
             class="md-header-nav__button md-logo">
           
@@ -134,7 +135,7 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title"
             data-md-component="title">
-            <a href="https://kintone.github.io/kintone-ui-component/">kintone UI Component</a> <a style="text-decoration: underline;" href="https://kintone.github.io/kintone-ui-component//latest/versions">v0.2.0</a>
+            <a href="../..">kintone UI Component</a> <a style="text-decoration: underline;" href="../../versions">v0.7.4</a>
         </div>
       </div>
  
@@ -496,6 +497,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../ColorPicker/" title="ColorPicker" class="md-nav__link">
+      ColorPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DateTime/" title="DateTime" class="md-nav__link">
+      DateTime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Dialog/" title="Dialog" class="md-nav__link">
       Dialog
     </a>
@@ -606,6 +631,18 @@
   <li class="md-nav__item">
     <a href="../Table/" title="Table" class="md-nav__link">
       Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tabs/" title="Tabs" class="md-nav__link">
+      Tabs
     </a>
   </li>
 
@@ -824,8 +861,8 @@
 </tr>
 </tbody>
 </table>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({
     text: 'Submit',
@@ -846,7 +883,7 @@ export default class Plugin extends React.Component {
 }
 </code></pre>
 
-<p></details></p>
+</details>
 <h2 id="methods">Methods</h2>
 <h3 id="render">render()</h3>
 <p>Get dom element of component.</p>
@@ -854,8 +891,8 @@ export default class Plugin extends React.Component {
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>Dom element</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -865,6 +902,7 @@ body.appendChild(button.render());
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
     render() {
@@ -873,9 +911,11 @@ export default class Plugin extends React.Component {
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
+
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="settexttext">setText(text)</h3>
 <p>Set displayed text in button.</p>
 <p><strong>Parameter</strong></p>
@@ -899,8 +939,8 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -911,17 +951,32 @@ button.setText('submit');
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+    constructor(props) {
+     super(props);
+     this.state={
+        text:&quot;Submit&quot;
+    }
+   }
+    setText=(text)=&gt;{
+        this.setState({text})
+    }
+
     render() {
         return (
-            &lt;Button text='Submit' type='normal' /&gt;
+           &lt;div&gt;
+                &lt;Button text={this.state.text} type='normal' /&gt;
+                &lt;button onClick={()=&gt;this.setText(&quot;New Button&quot;)}&gt;setText&lt;/button&gt;
+           &lt;/div&gt;
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="settypetype">setType(type)</h3>
 <p>Set the displayed type for button.</p>
 <p><strong>Parameter</strong></p>
@@ -938,15 +993,15 @@ export default class Plugin extends React.Component {
 <tr>
 <td>type</td>
 <td>String</td>
-<td>No</td>
+<td>Yes</td>
 <td>Style of the button:<ul><li> 'normal' </li><li> 'submit' </li></ul> Default value: 'normal'</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -957,17 +1012,33 @@ button.setType('normal');
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            type:&quot;Submit&quot;,
+            text:&quot;text&quot;
+        }
+   }
+    setType=(type)=&gt;{
+        this.setState({type})
+    }
+
     render() {
         return (
-            &lt;Button text='Submit' type='normal' /&gt;
+           &lt;div&gt;
+                &lt;Button text={this.state.text} type={this.state.type} /&gt;
+                &lt;button onClick={()=&gt;this.setType(&quot;submit&quot;)}&gt;Set Type&lt;/button&gt;
+           &lt;/div&gt;
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="oneventname-callback">on(eventName, callback)</h3>
 <p>Register callback for click event</p>
 <p><strong>Parameter</strong></p>
@@ -997,8 +1068,8 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -1011,6 +1082,7 @@ button.on('click', function(event) {
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
     render() {
@@ -1019,21 +1091,22 @@ export default class Plugin extends React.Component {
         );
     }
 
-    handleButtonClick(event) {
+    handleButtonClick = (event) =&gt; {
         console.log('on click');
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="show">show()</h3>
 <p>Display button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -1044,25 +1117,42 @@ button.show();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+   constructor(props) {
+     super(props);
+     this.state={
+        isVisible:false,
+        text:&quot;avc&quot;
+    }
+   }
+
+    show=()=&gt;{
+        this.setState({isVisible:true})
+    }
+
     render() {
         return (
-            &lt;Button text=&quot;button&quot; isVisible={true} /&gt;
+           &lt;div&gt;
+                &lt;Button text={this.state.text} isVisible={this.state.isVisible} /&gt;
+                &lt;button onClick={()=&gt;this.show()}&gt;show&lt;/button&gt;
+           &lt;/div&gt;
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="hide">hide()</h3>
 <p>Hide button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -1073,25 +1163,42 @@ button.hide();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+    constructor(props) {
+     super(props);
+     this.state={
+        isVisible:true,
+        text:&quot;avc&quot;
+    }
+   }
+
+    hide=()=&gt;{
+        this.setState({isVisible:false})
+    }
+
     render() {
         return (
-            &lt;Button text=&quot;button&quot; isVisible={false} /&gt;
+           &lt;div&gt;
+                &lt;Button text={this.state.text} isVisible={this.state.isVisible} /&gt;
+                &lt;button onClick={()=&gt;this.hide()}&gt;hide&lt;/button&gt;
+           &lt;/div&gt;
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="disable">disable()</h3>
 <p>Disable button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -1102,25 +1209,41 @@ button.disable();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    render() {
-        return (
-            &lt;Button text=&quot;button&quot; isDisabled={true} /&gt;
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isDisabled: false,
+      text: &quot;avc&quot;
+    };
+  }
+  disable = () =&gt; {
+    this.setState({ isDisabled: true });
+  };
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button text={this.state.text} isDisabled={this.state.isDisabled} /&gt;
+        &lt;button onClick={() =&gt; this.disable()}&gt;disable&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="enable">enable()</h3>
 <p>Enable button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
 <pre><code class="javascript">var button = new kintoneUIComponent.Button({text: 'button'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
@@ -1131,17 +1254,33 @@ button.enable();
 <p><strong>React</strong></p>
 <pre><code class="javascript">import { Button } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
-    render() {
-        return (
-            &lt;Button text=&quot;button&quot; isDisabled={false} /&gt;
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+        isDisabled: true,
+        text: &quot;avc&quot;
+    };
+  }
+  enable = () =&gt; {
+    this.setState({ isDisabled: false });
+  };
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button text={this.state.text} isDisabled={this.state.isDisabled} /&gt;
+        &lt;button onClick={() =&gt; this.enable()}&gt;enable&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
                 
                   
                 
@@ -1213,7 +1352,7 @@ export default class Plugin extends React.Component {
       
     </div>
     
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

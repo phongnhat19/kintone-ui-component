@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
     
     
       
@@ -63,6 +63,7 @@
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
     
       <link rel="stylesheet" href="../../style/extra.css">
     
@@ -102,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#iconbutton" tabindex="1" class="md-skip">
+      <a href="#iconbutton" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -115,7 +116,7 @@
  
       <!-- Link to home -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://kintone.github.io/kintone-ui-component/"
+        <a href="../.."
             title="kintone UI Component"
             class="md-header-nav__button md-logo">
           
@@ -134,7 +135,7 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title"
             data-md-component="title">
-            <a href="https://kintone.github.io/kintone-ui-component/">kintone UI Component</a> <a style="text-decoration: underline;" href="https://kintone.github.io/kintone-ui-component//latest/versions">v0.2.0</a>
+            <a href="../..">kintone UI Component</a> <a style="text-decoration: underline;" href="../../versions">v0.7.4</a>
         </div>
       </div>
  
@@ -382,6 +383,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../ColorPicker/" title="ColorPicker" class="md-nav__link">
+      ColorPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DateTime/" title="DateTime" class="md-nav__link">
+      DateTime
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Dialog/" title="Dialog" class="md-nav__link">
       Dialog
     </a>
@@ -474,8 +499,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#settypetype" title="setType(type)" class="md-nav__link">
-    setType(type)
+  <a href="#setcolorcolor" title="setColor(color)" class="md-nav__link">
+    setColor(color)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshapeshape" title="setShape(shape)" class="md-nav__link">
+    setShape(shape)
   </a>
   
 </li>
@@ -488,8 +520,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setcolorcolor" title="setColor(color)" class="md-nav__link">
-    setColor(color)
+  <a href="#settypetype" title="setType(type)" class="md-nav__link">
+    setType(type)
   </a>
   
 </li>
@@ -623,6 +655,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Tabs/" title="Tabs" class="md-nav__link">
+      Tabs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Text/" title="Text" class="md-nav__link">
       Text
     </a>
@@ -696,8 +740,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#settypetype" title="setType(type)" class="md-nav__link">
-    setType(type)
+  <a href="#setcolorcolor" title="setColor(color)" class="md-nav__link">
+    setColor(color)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshapeshape" title="setShape(shape)" class="md-nav__link">
+    setShape(shape)
   </a>
   
 </li>
@@ -710,8 +761,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setcolorcolor" title="setColor(color)" class="md-nav__link">
-    setColor(color)
+  <a href="#settypetype" title="setType(type)" class="md-nav__link">
+    setType(type)
   </a>
   
 </li>
@@ -795,22 +846,28 @@
 <td>The object contains params of constructor.</td>
 </tr>
 <tr>
-<td>options.type</td>
+<td>options.color</td>
 <td>String</td>
 <td>No</td>
-<td>The type of of button. The value is one of: <ul><li> 'insert'</li><li> 'remove'</li><li> 'close'</li><li> 'file'</li><li> 'right'</li><li> 'left'</li></ul> Default value is 'insert'.</td>
+<td>Color of icon button:<ul><li>  'gray'</li><li>'blue'</li><li>'red'</li><li>'green'</li><li>'transparent'</li></ul>Default value is 'gray'.</td>
 </tr>
 <tr>
 <td>options.size</td>
 <td>String</td>
 <td>No</td>
-<td>Size of icon button:<ul><li> 'large'</li><li> 'small'</li></ul> Default value is 'large'.</td>
+<td>Size of icon button:<ul><li> 'normal'</li><li> 'small'</li></ul> Default value is 'normal'.</td>
 </tr>
 <tr>
-<td>options.color</td>
+<td>options.shape</td>
 <td>String</td>
 <td>No</td>
-<td>Color of icon button:<ul><li>  'gray'</li><li>'blue'</li><li>'red'</li><li>'green'</li><li>'transparent'</li></ul>Default value is 'gray'.</td>
+<td>The shape of of button. The value is one of::<ul><li> 'circle'</li><li> 'square'</li></ul> Default value is 'circle'.</td>
+</tr>
+<tr>
+<td>options.type</td>
+<td>String</td>
+<td>No</td>
+<td>The type of of button. The value is one of: <ul><li> 'insert'</li><li> 'remove'</li><li> 'close'</li><li> 'file'</li><li> 'right'</li><li> 'left'</li></ul> Default value is 'insert'.</td>
 </tr>
 <tr>
 <td>options.isDisabled</td>
@@ -826,16 +883,15 @@
 </tr>
 </tbody>
 </table>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var insertBtn = new kintoneUIComponent.IconButton({type: 'insert',color:'blue', size: 'small'});
+<pre><code class="javascript">var insertBtn = new kintoneUIComponent.IconButton({type: 'insert',color:'blue', size: 'small'});
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
-import React from 'react';
-
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
+import React from 'react'; 
 export default class Plugin extends React.Component {
     render() {
         return (
@@ -845,7 +901,7 @@ export default class Plugin extends React.Component {
 }
 </code></pre>
 
-<p></details></p>
+</details>
 <h2 id="methods">Methods</h2>
 <h3 id="render">render()</h3>
 <p>Get dom element of component.</p>
@@ -853,17 +909,18 @@ export default class Plugin extends React.Component {
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>Dom element</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
     render() {
@@ -872,104 +929,10 @@ export default class Plugin extends React.Component {
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
-<h3 id="settypetype">setType(type)</h3>
-<p>Set the type of the button.</p>
-<p><strong>Parameter</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>String</td>
-<td>No</td>
-<td>The type of of button. The value is one of: <ul><li> 'insert'</li><li> 'remove'</li><li>'close'</li><li> 'file'</li><li> 'right'</li><li> 'left'</li></ul> Default value is 'insert'.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns</strong></p>
-<p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
-<p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
-var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
-body.appendChild(iconBtn.render());
-
-iconBtn.setType('remove');
-</code></pre>
-
-<p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
-import React from 'react';
-
-export default class Plugin extends React.Component {
-    render() {
-        return (
-            &lt;IconButton type='insert' size='small' type='remove'/&gt;
-        );
-    }
-}
-
-</code></pre>
-
-<p></details></p>
-<h3 id="setsizesize">setSize(size)</h3>
-<p>Change size of icon button.</p>
-<p><strong>Parameter</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>size</td>
-<td>String</td>
-<td>No</td>
-<td>The size of of button. The value is one of: <ul><li>  'normal'</li><li> 'small'</li></ul> Default value is 'normal'.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns</strong></p>
-<p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
-<p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
-var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
-body.appendChild(iconBtn.render());
-
-iconBtn.setSize('small');
-</code></pre>
-
-<p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
-import React from 'react';
-
-export default class Plugin extends React.Component {
-    render() {
-        return (
-            &lt;IconButton type='insert' size='small' /&gt;
-        );
-    }
-}
-</code></pre>
-
-<p></details></p>
+</details>
 <h3 id="setcolorcolor">setColor(color)</h3>
 <p>Change color of icon button.</p>
 <p><strong>Parameter</strong></p>
@@ -986,38 +949,235 @@ export default class Plugin extends React.Component {
 <tr>
 <td>color</td>
 <td>String</td>
-<td>No</td>
-<td>The size of of button. The value is one of: <ul><li>  'gray'</li><li> 'blue'</li><li> 'red'</li><li> 'green'</li><li>'transparent'</li></ul> Default value is 'gray'.</td>
+<td>Yes</td>
+<td>The color of the button. The value is one of the following: <ul><li>  'gray'</li><li> 'blue'</li><li> 'red'</li><li> 'green'</li><li>'transparent'</li></ul> Default value is 'gray'.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
-iconBtn.setSize('small');
-iconBtn.setShape('normal');
 iconBtn.setColor('green');
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+     constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+      }
+    }
+    handleSetColor=()=&gt;{
+        this.setState({color:&quot;blue&quot;})
+    }
     render() {
         return (
-            &lt;IconButton text='insert' size='small' shape='normal' color='green' /&gt;
+            &lt;div&gt;
+                &lt;button onClick={this.handleSetColor}&gt;Set Color&lt;/button&gt;
+                &lt;IconButton type='insert' color={this.state.color} /&gt;
+            &lt;/div&gt;
         );
     }
 }
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
+<h3 id="setshapeshape">setShape(shape)</h3>
+<p>Change shape of icon button.</p>
+<p><strong>Parameter</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shape</td>
+<td>String</td>
+<td>Yes</td>
+<td>The shape of the button. The value is one of the following: <ul><li>  'circle'</li><li> 'square'</li></ul> Default value is 'circle'.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<p>None</p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
+<p><strong>Javascript</strong></p>
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
+body.appendChild(iconBtn.render());
+iconBtn.setShape('square');
+</code></pre>
+
+<p><strong>React</strong></p>
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
+import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
+
+export default class Plugin extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          shape:&quot;circle&quot;
+      }
+    }
+    handleSetShape=()=&gt;{
+        this.setState({shape:&quot;square&quot;})
+    }
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleSetShape}&gt;Set Shape&lt;/button&gt;
+                &lt;IconButton type='insert' color={this.state.color} shape={this.state.shape}/&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
+</code></pre>
+
+</details>
+<h3 id="setsizesize">setSize(size)</h3>
+<p>Change size of icon button.</p>
+<p><strong>Parameter</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>String</td>
+<td>Yes</td>
+<td>The size of the button. The value is one of the following: <ul><li>  'normal'</li><li> 'small'</li></ul> Default value is 'normal'.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<p>None</p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
+<p><strong>Javascript</strong></p>
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
+body.appendChild(iconBtn.render());
+
+iconBtn.setSize('small');
+</code></pre>
+
+<p><strong>React</strong></p>
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
+import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
+
+export default class Plugin extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          size:&quot;normal&quot;
+      }
+    }
+    handleSetSize=()=&gt;{
+        this.setState({size:&quot;small&quot;})
+    }
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleSetSize}&gt;Set Size&lt;/button&gt;
+                &lt;IconButton type='insert' color={this.state.color} size={this.state.size}/&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
+</code></pre>
+
+</details>
+<h3 id="settypetype">setType(type)</h3>
+<p>Set the type of the button.</p>
+<p><strong>Parameter</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>Yes</td>
+<td>The type of button. The value is one of following: <ul><li> 'insert'</li><li> 'remove'</li><li>'close'</li><li> 'file'</li><li> 'right'</li><li> 'left'</li></ul> Default value is 'insert'.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<p>None</p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
+<p><strong>Javascript</strong></p>
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
+body.appendChild(iconBtn.render());
+
+iconBtn.setType('remove');
+</code></pre>
+
+<p><strong>React</strong></p>
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
+import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
+
+export default class Plugin extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          type:'insert'
+      }
+    }
+    handleSetType=()=&gt;{
+        this.setState({type:&quot;remove&quot;})
+    }
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleSetType}&gt;Set type&lt;/button&gt;
+                &lt;IconButton  color={this.state.color} type={this.state.type}/&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
+</code></pre>
+
+</details>
 <h3 id="oneventname-callback">on(eventName, callback)</h3>
 <p>Register callback for click event</p>
 <p><strong>Parameter</strong></p>
@@ -1047,10 +1207,10 @@ export default class Plugin extends React.Component {
 </table>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
 
@@ -1060,8 +1220,9 @@ iconBtn.on('click', function(event) {
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
     render() {
@@ -1069,24 +1230,24 @@ export default class Plugin extends React.Component {
             &lt;IconButton type='insert' size='small' color='blue' onClick={this.handleClick} /&gt;
         );
     }
-    handleClick() {
+    handleClick = () =&gt; {
         console.log('on click');
     }
 }
-
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="show">show()</h3>
 <p>Display the icon button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
 
@@ -1094,30 +1255,44 @@ iconBtn.show();
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          isVisible:false
+      }
+    }
+    handleShow=()=&gt;{
+        this.setState({isVisible:true})
+    }
     render() {
         return (
-            &lt;IconButton type='insert' size='small' color='blue' isVisible={true} /&gt;
+            &lt;div&gt;
+                &lt;button onClick={this.handleShow}&gt;Show&lt;/button&gt;
+                &lt;IconButton  color={this.state.color} isVisible={this.state.isVisible}/&gt;
+            &lt;/div&gt;
         );
     }
 }
-
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="hide">hide()</h3>
 <p>Hide the icon button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
 
@@ -1125,30 +1300,44 @@ iconBtn.hide();
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          isVisible:true
+      }
+    }
+    handleHide=()=&gt;{
+        this.setState({isVisible:false})
+    }
     render() {
         return (
-            &lt;IconButton type='insert' size='small' color='blue' isVisible={false} /&gt;
+            &lt;div&gt;
+                &lt;button onClick={this.handleHide}&gt;Hide&lt;/button&gt;
+                &lt;IconButton  color={this.state.color} isVisible={this.state.isVisible}/&gt;
+            &lt;/div&gt;
         );
     }
 }
-
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="disable">disable()</h3>
 <p>Disabled the icon button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
 
@@ -1156,30 +1345,44 @@ iconBtn.disable();
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          isDisabled:false
+      }
+    }
+    handleDisable=()=&gt;{
+        this.setState({isDisabled:true})
+    }
     render() {
         return (
-            &lt;IconButton type='insert' size='small' color='blue' isDisabled={true} /&gt;
+            &lt;div&gt;
+                &lt;button onClick={this.handleDisable}&gt;Disable&lt;/button&gt;
+                &lt;IconButton  color={this.state.color} isDisabled={this.state.isDisabled}/&gt;
+            &lt;/div&gt;
         );
     }
 }
-
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
 <h3 id="enable">enable()</h3>
 <p>Enabled the icon button.</p>
 <p><strong>Parameter</strong></p>
 <p>None</p>
 <p><strong>Returns</strong></p>
 <p>None</p>
-<p><details class="tab-container" open>
-<Summary>Sample</Summary></p>
+<details class="tab-container" open="">
+<p><Summary>Sample</Summary></p>
 <p><strong>Javascript</strong></p>
-<pre><code>var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
+<pre><code class="javascript">var iconBtn = new kintoneUIComponent.IconButton({type: 'insert'});
 var body = document.getElementsByTagName(&quot;BODY&quot;)[0];
 body.appendChild(iconBtn.render());
 
@@ -1187,20 +1390,34 @@ iconBtn.enable();
 </code></pre>
 
 <p><strong>React</strong></p>
-<pre><code>import { IconButton } from '@kintone/kintone-ui-component';
+<pre><code class="javascript">import { IconButton } from '@kintone/kintone-ui-component';
 import React from 'react';
+import Reactdom from &quot;react-dom&quot;;
 
 export default class Plugin extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state={
+          color:&quot;red&quot;,
+          isDisabled:true
+      }
+    }
+    handleEnable=()=&gt;{
+        this.setState({isDisabled:false})
+    }
     render() {
         return (
-            &lt;IconButton type='insert' size='small' color='blue' isDisabled={false} /&gt;
+            &lt;div&gt;
+                &lt;button onClick={this.handleEnable}&gt;Enable&lt;/button&gt;
+                &lt;IconButton  color={this.state.color} isDisabled={this.state.isDisabled}/&gt;
+            &lt;/div&gt;
         );
     }
 }
-
+Reactdom.render(&lt;Plugin /&gt;, document.getElementById(&quot;root&quot;));
 </code></pre>
 
-<p></details></p>
+</details>
                 
                   
                 
@@ -1272,7 +1489,7 @@ export default class Plugin extends React.Component {
       
     </div>
     
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
